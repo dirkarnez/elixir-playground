@@ -16,32 +16,22 @@
 #     tini \
 #     tzdata
 
-FROM ubuntu:latest
+# syntax=docker/dockerfile:1
+ARG ALPINE_VERSION=3.16.2
+ARG ELIXIR_VERSION=1.14.3
+ARG ERLANG_VERSION=23.3.4.18
 
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update
-RUN apt-get -y --no-install-recommends --allow-unauthenticated install \
-   build-essential \
-   git \
-   zip \
-   unzip \
-   xz-utils \
-   wget \
-   curl \
-   ca-certificates \
-   make \
-   bash \
-   bc
+FROM hexpm/elixir:${ELIXIR_VERSION}-erlang-${ERLANG_VERSION}-alpine-${ALPINE_VERSION} AS base
+# RUN mix do local.hex --force, local.rebar --force
 
-# Create a custom user with UID 1234 and GID 1234
-RUN groupadd -g 1234 customgroup && \
-    useradd -m -u 1234 -g customgroup customuser
-    
-# Switch to the custom user
-USER customuser
- 
-RUN mkdir /workspace
-COPY . /workspace
+FROM base AS dev
+RUN apk add --no-cache\
+    # required by hex\
+    git \
+    # required by hex:phoenix_live_reload\
+    inotify-tools
+
+# RUN mix deps.get
 
 WORKDIR /workspace
 VOLUME /workspace
