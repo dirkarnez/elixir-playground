@@ -1,1 +1,3 @@
 - https://erlang.org/download/erlang-book-part1.pdf
+- https://github.com/elixir-lang/elixir/releases/download/main-latest/elixir-otp-27.zip
+- https://github.com/erlang/otp/releases/download/OTP-27.1.2/otp_win64_27.1.2.zip
