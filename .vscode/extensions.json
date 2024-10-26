@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "github.vscode-github-actions",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "elixir-lsp.elixir-ls"
     ]
 }

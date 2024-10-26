@@ -1,0 +1,13 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": null,
+        "Windows PowerShell": null,
+        "Command Prompt": {
+            "path": ["${env:windir}\\System32\\cmd.exe"],
+            "env": { 
+                "PATH": "${env:USERPROFILE}\\Downloads\\otp_win64_27.1.2\\bin;${env:USERPROFILE}\\Downloads\\elixir-otp-27\\bin;"
+            }
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}
