@@ -23,3 +23,4 @@
     - [Ecto.Query.WindowAPI — Ecto v3.12.4](https://hexdocs.pm/ecto/Ecto.Query.WindowAPI.html)
 - [ ] fork this for Mix.Task
   - [reticulum/lib/mix/tasks/generate_api_token.ex at master · Hubs-Foundation/reticulum](https://github.com/Hubs-Foundation/reticulum/blob/master/lib/mix/tasks/generate_api_token.ex)
+- [ ] Study [woutdp/live_svelte: Svelte inside Phoenix LiveView with seamless end-to-end reactivity](https://github.com/woutdp/live_svelte)
